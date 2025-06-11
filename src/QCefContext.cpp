@@ -4,7 +4,10 @@
 #include <QDebug>
 #pragma endregion
 
+#include "CefViewCoreAssetBridge.h"
 #include "details/QCefContextPrivate.h"
+
+#include <iostream>
 
 QCefContext* QCefContext::s_self;
 
@@ -117,4 +120,18 @@ QCefContext::uninit()
   d->uninitialize();
 
   s_self = nullptr;
+}
+
+void
+QCefContext::setAssetBridge(FnAsset func)
+{
+  std::cout << "setAssetBridge" << std::endl;
+  SetAssetFunc(func);
+}
+
+void
+QCefContext::setFreeCString(FnFree func)
+{
+  std::cout << "freeCString" << std::endl;
+  SetFreeFunc(func);
 }

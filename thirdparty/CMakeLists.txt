@@ -1,7 +1,7 @@
 include(FetchContent)
 
 if(NOT CEFVIEW_CORE_VERSION)
-    set(DEFAULT_CEFVIEW_CORE_VERSION "8b618d4290c9187eedfb8b176aae8a7dfcaa51ab")
+    set(DEFAULT_CEFVIEW_CORE_VERSION "412610a702f9578e4e7389189fb7c2d5ddf6f9a1")
     set(CEFVIEW_CORE_VERSION ${DEFAULT_CEFVIEW_CORE_VERSION})
     message(STATUS "CEFVIEW_CORE_VERSION not set, use default value:${CEFVIEW_CORE_VERSION}")
 endif()
@@ -9,7 +9,7 @@ endif()
 # fetch CefViewCore project
 FetchContent_Declare(
     CefViewCore
-    GIT_REPOSITORY https://github.com/CefView/CefViewCore.git
+    GIT_REPOSITORY https://github.com/phatvu1301/CefViewCore.git
     GIT_TAG ${CEFVIEW_CORE_VERSION}
 )
 
@@ -47,12 +47,12 @@ FetchContent_Declare(
 # set(CEF_SDK_VERSION "123.0.13+gfc703fb+chromium-123.0.6312.124")  # NOT TEST
 # set(CEF_SDK_VERSION "124.3.9+g9bd638f+chromium-124.0.6367.207")   # NOT TEST
 # set(CEF_SDK_VERSION "125.0.22+gc410c95+chromium-125.0.6422.142")  # NOT TEST
-set(CEF_SDK_VERSION "126.2.18+g3647d39+chromium-126.0.6478.183") # NOT TEST
+# set(CEF_SDK_VERSION "126.2.18+g3647d39+chromium-126.0.6478.183") # NOT TEST
 
 # set(CEF_SDK_VERSION "127.3.5+g114ea2a+chromium-127.0.6533.120") # GOOD
 # set(CEF_SDK_VERSION "128.4.9+g9840ad9+chromium-128.0.6613.120")   # BAD   # debugbreak - debug mode
 # set(CEF_SDK_VERSION "136.1.6+g1ac1b14+chromium-136.0.7103.114")
-
+set(CEF_SDK_VERSION "137.0.10+g7e14fe1+chromium-137.0.7151.69")
 # set folder
 set(CMAKE_FOLDER "QCefView/Core")
 

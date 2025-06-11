@@ -18,6 +18,10 @@
 
 #include <QCefConfig.h>
 
+typedef const char* (*FnAsset)(const char*, int*, const char**);
+
+typedef void (*FnFree)(const char*);
+
 class QCefContextPrivate;
 
 /// <summary>
@@ -51,6 +55,10 @@ public:
   /// Destructs the CEF context
   /// </summary>
   ~QCefContext();
+
+  static void setAssetBridge(FnAsset func);
+
+  static void setFreeCString(FnFree func);
 
   /// <summary>
   /// Adds a url mapping item with local web resource directory. This works for all QCefView instances

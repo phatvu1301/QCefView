@@ -80,7 +80,6 @@ public:
     CefWindowOpenDispositionIgnoreAction,
   };
   Q_ENUM(CefWindowOpenDisposition)
-
 public:
   /// <summary>
   /// Constructs a QCefView instance

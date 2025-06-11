@@ -14,6 +14,8 @@
 #include "details/QCefViewPrivate.h"
 #include "details/utils/CommonUtils.h"
 
+#include <iostream>
+
 #if CEF_VERSION_MAJOR < 122
 const QCefFrameId QCefView::MainFrameID = 0;
 const QCefFrameId QCefView::AllFrameID = -1;
